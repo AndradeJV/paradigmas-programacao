@@ -6,13 +6,13 @@ public class Characters {
     private float quantityPower;
     private String typePower;
 
-    public String getTypePower() {
-        return typePower;
+    public  Characters(){
+
     }
 
-    public void setTypePower(String typePower) {
-        this.typePower = typePower;
-    }
+    public String getTypePower() { return typePower; }
+
+    public void setTypePower(String typePower) { this.typePower = typePower; }
 
     public String getName() {
         return name;
@@ -36,5 +36,13 @@ public class Characters {
 
     public void setQuantityPower(float quantityPower) {
         this.quantityPower = quantityPower;
+    }
+
+    public void printOut(){
+        System.out.println(
+                "Name: " + getName()
+                + " Quantity of power: " + getQuantityPower()
+                + " Quantity of life: " + getQuantityLife()
+                + " Type of power " + getTypePower());
     }
 }

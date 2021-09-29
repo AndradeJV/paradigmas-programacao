@@ -4,23 +4,29 @@ import Characters.Characters;
 
 public class Cavaleiro extends Characters {
 
-    @Override
-    public void setName(String name) {
-        super.setName("Cavaleiro");
+    private String powerPlus;
+
+    public Cavaleiro(){
+        setName("Cavaleiro");
+        setQuantityLife(100);
+        setQuantityPower(75);
+        setTypePower("Espada");
+        setPowerPlus("Machado");
     }
 
-    @Override
-    public void setTypePower(String typePower) {
-        super.setTypePower("Espada");
+    public String getPowerPlus() {
+        return powerPlus;
     }
 
-    @Override
-    public void setQuantityPower(float quantityPower) {
-        super.setQuantityPower(75);
+    public void setPowerPlus(String powerPlus) {
+        this.powerPlus = powerPlus;
     }
 
-    @Override
-    public void setQuantityLife(float quantityLife) {
-        super.setQuantityLife(100);
+    public void printOut(){
+        System.out.println("Name: " + getName()
+                + "\n Quantity of life: " + getQuantityLife()
+                + "\n Quantity of power: " + getQuantityPower()
+                + "\n Type of power: " + getTypePower()
+                + "\n-------------------------------");
     }
 }

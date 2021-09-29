@@ -3,25 +3,19 @@ package Characters.Arqueiro;
 import Characters.Characters;
 
 public class Arqueiro extends Characters {
-
-    @Override
-    public void setName(String name) {
-        super.setName("Arqueiro");
-    }
-
-    @Override
-    public void setTypePower(String typePower) {
-        super.setTypePower("Arco e flecha");
-    }
-
-    @Override
-    public void setQuantityPower(float quantityPower) {
-        super.setQuantityPower(60);
+    public Arqueiro(){
+        setName("Arqueiro");
+        setQuantityLife(100);
+        setQuantityPower(60);
+        setTypePower("Arco e flecha");
     }
 
 
-    @Override
-    public void setQuantityLife(float quantityLife) {
-        super.setQuantityLife(100);
+    public void printOut(){
+        System.out.println("Name: " + getName()
+                + "\n Quantity of life: " + getQuantityLife()
+                + "\n Quantity of power: " + getQuantityPower()
+                + "\n Type of power: " + getTypePower()
+                + "\n-------------------------------");
     }
 }

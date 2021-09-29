@@ -1,19 +1,28 @@
 package Menu;
 
+import Characters.Arqueiro.Arqueiro;
+import Characters.Cavaleiro.Cavaleiro;
+import Characters.Characters;
 import Characters.Mago.Mago;
 
 import java.util.Scanner;
 
 public class Menu {
     public Menu(){
+
+        Mago mago = new Mago();
+        Arqueiro arqueiro = new Arqueiro();
+        Cavaleiro cavaleiro = new Cavaleiro();
+
         Scanner read = new Scanner(System.in);
         int optionGame = 0;
+        int optionMenuIn = 0;
 
         System.out.println("\t\tSeja bem vindo ao RPG - Floot Rups");
         System.out.println("\t\tEscolha o que deseja fazer: ");
 
         do {
-            System.out.println("\t\t 1- Jogar\n \t\t 2- Sair");
+            System.out.println("\t\t 1- Mostrar Dados\n \t\t 2- Sair");
             System.out.printf("Opção: ");
             optionGame = read.nextInt();
 
@@ -25,29 +34,35 @@ public class Menu {
                 System.out.println("\t\t 4- Mostrar todos");
                 System.out.println("\t\t 5- Sair");
 
-                optionGame = read.nextInt();
+                optionMenuIn = read.nextInt();
 
-                switch (optionGame){
+                switch (optionMenuIn){
                     case 1:
-                        Mago mago = new Mago();
+                        mago.printOut();
                         break;
+
                     case 2:
-                        System.out.println("Personagem:");
+                        arqueiro.printOut();
                         break;
 
                     case 3:
-                        System.out.println("Personagem:");
+                        cavaleiro.printOut();
                         break;
 
                     case 4:
-                        System.out.println("Personagem:");
+                        mago.printOut();
+                        arqueiro.printOut();
+                        cavaleiro.printOut();
                         break;
 
                     case 5:
-                        System.out.println("Personagem:");
+                        System.out.println("Até a próxima!");
+                        break;
+
+                    default:
+                        System.out.println("Opção não encontrada!");
                         break;
                 }
-
             }
 
             else
